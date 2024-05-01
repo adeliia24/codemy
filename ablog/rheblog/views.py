@@ -21,3 +21,9 @@ class AddPostView(generic.CreateView):
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
+
+
+class UpdatePostView(generic.UpdateView):
+    model = Post
+    template_name = 'update_post.html'
+    fields=('title', 'body')
